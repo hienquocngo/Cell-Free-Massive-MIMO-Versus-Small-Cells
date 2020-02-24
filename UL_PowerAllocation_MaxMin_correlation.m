@@ -22,10 +22,10 @@ f = 1900; % Frequency in MHz
 aL = (1.1*log10(f)-0.7)*Hm-(1.56*log10(f)-0.8);
 L = 46.3+33.9*log10(f)-13.82*log10(Hb)-aL;
 
-power_f=0.2; %downlink power: 200 mW
+power_f=0.1; %uplink power: 100 mW
 noise_p = 10^((-203.975+10*log10(20*10^6)+9)/10); %noise power
-Pd = power_f/noise_p;%nomalized receive SNR
-Pp=Pd;%pilot power
+Pu = power_f/noise_p;%nomalized receive SNR
+Pp=Pu;%pilot power
 
 d0=0.01;%km
 d1=0.05;%km
